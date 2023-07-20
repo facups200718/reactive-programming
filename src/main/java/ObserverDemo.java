@@ -14,5 +14,7 @@ public class ObserverDemo {
                 "Purple Violet", "Prairie Crocus", "Wild Rose");
         Observable<String> flowerObservable = Observable.fromIterable(flowers);
         flowerObservable.subscribe(System.out::println);
+        flowerObservable.subscribe(s -> System.out.println(s.toLowerCase()));
+        flowerObservable.subscribe(s -> System.out.println(s.toUpperCase()));
     }
 }
